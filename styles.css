@@ -72,7 +72,7 @@ section h2 {
 }
 
 .home_background {
-    background-image: url('../media/home_background.jpg');
+    background-image: url('home_background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
