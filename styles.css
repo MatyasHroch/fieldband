@@ -65,12 +65,28 @@ nav {
     margin: 0;
 }
 
-
 section h2 {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
     margin: 0;
+}
+
+header img {
+    width: 4em;
+}
+
+.no-href-styles {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    header img {
+        width: 3em;
+    }
 }
 
 /* .home_background {

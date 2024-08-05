@@ -29,7 +29,8 @@ async function renderObject(name, values, tagName) {
   // rendering of the PRIMITIVES
   for (const primitiveName in primitives) {
     const value = primitives[primitiveName];
-    resultString = resultString.replace(`{${primitiveName}}`, value);
+    const regex = new RegExp(`{${primitiveName}}`);
+    resultString = resultString.replace(regex, value);
   }
 
   // rendering strings of arrays and objects
@@ -37,7 +38,8 @@ async function renderObject(name, values, tagName) {
     const value = values[key];
     if (!Object.keys(primitives).includes(key)) {
       const result = await render(value, key);
-      resultString = resultString.replace(`<${key} />`, result);
+      const regex = new RegExp(`<${key} />`, "g");
+      resultString = resultString.replace(regex, result);
     }
   }
 

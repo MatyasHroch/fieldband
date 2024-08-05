@@ -31,7 +31,6 @@ export async function loadAll(directoryPath = defaultDirectory) {
     try {
       const textHtml = await fs.promises.readFile(path, "utf8");
       const variables = getVariables(textHtml);
-      const withSlot = textHtml.includes("<slot/>");
       prototypes[fileName] = {
         variables,
         textHtml,

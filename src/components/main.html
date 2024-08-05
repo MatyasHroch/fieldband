@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{language}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,26 +9,32 @@
   </head>
   <body>
     <header>
-      <h1 class="heading--header">field.</h1>
+      <a href="#" class="no-href-styles">
+        <img src="/favicon.png" alt="logo" class="" />
+      </a>
       <nav>
         <ul class="navigation">
           <li>
-            <a href="#">Home</a>
+            <a href="#news">{news}</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about">{about}</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#gigs">{gigs}</a>
+          </li>
+          <li>
+            <a href="#contact">{contact}</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
       <img src="/homeBackground.jpg" alt="picture_of_a_band" />
+      <!-- <img src="/media/logo.png" alt="logo" /> -->
       <!-- <div class="home_background"></div> -->
-      <about />
-      <contact />
+      <about_page />
+      <contact_page />
     </main>
     <footer>Copyright</footer>
   </body>
