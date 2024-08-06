@@ -61,9 +61,11 @@ section h2 {
 
 .navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .navigation a {
@@ -92,7 +94,7 @@ header img {
 
 @media screen and (max-width: 600px) {
     header img {
-        width: 3em;
+        display: none;
     }
 }
 
