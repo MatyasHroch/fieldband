@@ -98,6 +98,11 @@ header img {
     }
 }
 
+/* Atomics */
+.display-none {
+    display: none;
+}
+
 /* .home_background {
     background-image: url('home_background.jpg');
     background-size: cover;
