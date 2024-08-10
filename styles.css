@@ -1,8 +1,11 @@
 :root {
     --main-bg-color: rgb(30, 30, 30);
+    --main-bg-color-opacity: rgb(30, 30, 30, 0.8);
     --main-text-color: #E0E0E0;
+    --main-text-color-opacity: rgba(224, 224, 224, 0.8);
     --secondary-bg-color: rgb(51, 51, 51);
     --secondary-bg-color-opacity: rgb(51, 51, 51, 0.8);
+    --secondary-bg-color-opacity2: rgb(51, 51, 51, 0.8);
 }
 
 header {
@@ -13,6 +16,22 @@ header {
     text-align: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
 }
 
 footer {
@@ -36,18 +55,27 @@ main {
     gap: 2rem;
 }
 
-address {
+address,
+time {
     font-size: 1.5rem;
     font-style: normal;
 }
+
 
 i {
     font-size: 2rem;
     padding: 0.5rem 0;
 }
 
+#gigs i {
+    min-width: 19.2px;
+    text-align: center;
+
+}
+
 a {
-    color: inherit
+    color: inherit;
+    text-decoration: none;
 }
 
 ul {
@@ -67,14 +95,13 @@ section {
 }
 
 section h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin: 0;
     margin-bottom: 1rem;
 }
 
-iframe {}
 
 .navigation {
     display: flex;
@@ -86,9 +113,45 @@ iframe {}
     font-size: 1.2rem;
 }
 
+*:target {
+    scroll-margin-top: 60px;
+}
+
+.header-logo {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.floating-logo {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-bg-color);
+    top: 1rem;
+    gap: 2rem;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+.block {
+    display: block;
+}
+
+.font-size-1-2 {
+    font-size: 1.2rem;
+}
+
 .navigation a {
     color: white;
     text-decoration: none;
+}
+
+.relative {
+    position: relative;
 }
 
 .heading--header {
@@ -102,6 +165,7 @@ iframe {}
 header img {
     width: 4em;
 }
+
 
 .no-href-styles {
     text-decoration: none;
@@ -121,6 +185,18 @@ header img {
     justify-content: center;
 }
 
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
 .gap-2 {
     gap: 1rem;
 }
@@ -129,11 +205,121 @@ header img {
     gap: 0.5rem;
 }
 
+.w-fit {
+    width: fit-content;
+}
+
+.font-size-normal {
+    font-size: 1rem;
+}
+
+.font-size-1-2 {
+    font-size: 1.2rem;
+}
+
+.font-size-big {
+    font-size: 1.5rem;
+}
+
+/* Hamburger menu */
+dialog {
+    width: 110vh;
+    height: 100vh;
+    border-radius: 1em;
+    background-color: var(--main-bg-color);
+    border: none;
+}
+
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    padding: 0.25rem 0.25rem;
+    color: var(--main-text-color);
+    background: none;
+}
+
+.menu-button i {
+    padding: 0;
+}
+
+dialog header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: none;
+}
+
+dialog nav {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--main-text-color-opacity);
+    border-top: 1px solid var(--main-text-color-opacity);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--main-text-color);
+}
 
 
+dialog i {
+    color: var(--main-text-color-opacity);
+}
+
+i.fa-instagram {
+    font-size: 2.25rem;
+}
+
+.no-scrolling {
+    overflow: hidden;
+}
+
+/* Youtube videos */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    padding-bottom: calc(56.25% * 0.5);
+    /* 16: 9 and 75%  */
+    width: 50%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
+
+    .floating-logo {
+        display: none;
+    }
+
+    .header-logo {
+        display: flex;
+    }
+
+    header,
+    section {
+        padding: 0.5rem 1rem;
+    }
+
     header img {
         /* display: none; */
         width: 2.5em;
@@ -142,7 +328,39 @@ header img {
     .sm-gap-1 {
         gap: 0.5rem;
     }
+
+    .floating-logo {
+        font-size: 1rem;
+        gap: 1rem;
+        top: 0.5rem;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header>nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
 }
+
+@media screen and (max-width: 1024px) {
+    .floating-logo {
+        font-size: 1.5rem;
+    }
+
+    .video-container {
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+
+}
+
 
 
 /* .home_background {

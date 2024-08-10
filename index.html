@@ -1,78 +1,187 @@
 <!DOCTYPE html>
-<html lang="{language}">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.webp" />
     <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/b67a1c33ae.js"
       crossorigin="anonymous"
     ></script>
-
     <title>f i e l d .</title>
   </head>
   <body>
     <header>
-      <a href="#" class="no-href-styles">
-        <img src="./favicon.png" alt="logo" />
-      </a>
+  <a href="#" class="no-href-styles">
+    <img src="./favicon.webp" alt="logo" />
+  </a>
+
+  <div class="header-logo">
+    <span>f</span>
+    <span>i</span>
+    <span>e</span>
+    <span>l</span>
+    <span>d</span>
+    <span>.</span>
+  </div>
+  <!-- <span class="font-size-1-2">f i e l d .</span> -->
+  <nav>
+    <ul class="navigation">
+      <!-- <li>
+          <a href="#news">Novinky</a>
+        </li> -->
+      <!-- <li>
+          <a href="#about">Kapela</a>
+        </li> -->
+      <li>
+        <a href="#records">Nahrávky</a>
+      </li>
+      <li>
+        <a href="#gigs">Koncerty</a>
+      </li>
+      <li>
+        <a href="#contact">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="menu-button">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <dialog class="dialog-menu">
+    <div class="dialog-container">
+      <header>
+        <button class="menu-button js-close-button">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </header>
       <nav>
-        <ul class="navigation">
+        <ul class="mobile-navigation">
           <!-- <li>
-            <a href="#news">Novinky</a>
-          </li> -->
+                <a href="#news">Novinky</a>
+              </li> -->
           <!-- <li>
-            <a href="#about">Kapela</a>
-          </li> -->
-          <li>
-            
-          </li>
+                <a href="#about">Kapela</a>
+              </li> -->
           <li>
             <a href="#records">Nahrávky</a>
           </li>
-          <!-- <li>
+          <li>
             <a href="#gigs">Koncerty</a>
-          </li> -->
+          </li>
           <li>
             <a href="#contact">Kontakt</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <main>
+      <div class="flex justify-center">
+        <div class="flex gap-2 items-center">
+  <a href="https://www.facebook.com/field.band">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/field._band/">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+      </div>
+    </div>
+  </dialog>
+</header>
+<script>
+  const menuButton = document.querySelector(".menu-button");
+  const dialogMenu = document.querySelector(".dialog-menu");
+  const closeMenuButton = document.querySelector(".js-close-button");
+  const menuItems = document.querySelectorAll(".mobile-navigation li");
+
+  const body = document.getElementsByTagName("body")[0];
+
+  function openMenu() {
+    dialogMenu.showModal();
+    body.classList.add("no-scrolling");
+  }
+
+  function closeMenu() {
+    dialogMenu.close();
+    body.classList.remove("no-scrolling");
+  }
+
+  menuButton.addEventListener("click", openMenu);
+  closeMenuButton.addEventListener("click", closeMenu);
+  for (const item of menuItems) {
+    item.addEventListener("click", closeMenu);
+  }
+</script>
+
+    <main class="relative">
+      <div class="floating-logo">
+  <span>f</span>
+  <span>i</span>
+  <span>e</span>
+  <span>l</span>
+  <span>d</span>
+  <span>.</span>
+</div>
+
       <img src="./media/home.webp" alt="picture_of_a_band" />
       <!-- <img src="/media/logo.png" alt="logo" /> -->
       <!-- <div class="home_background"></div> -->
-      <news_pageeee />
-      <about_pageeee />
-      <section id="records">
-  <h2>Nahrávky</h2>
-  <iframe
-    src="https://www.youtube.com/embed/BpS5IyCyr50?si=rLsqnJ3LXLysYT-q"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
+      <section id="gigs">
+  <h2>Koncerty</h2>
+  <div>
+    <article>
+      <h3 class="mt-2">Pivní slavnosti</h3>
+      <a
+        href="https://mapy.cz/s/mozadefehe"
+        class="flex gap-2 items-center mt-1 w-fit"
+      >
+        <i class="fa-solid fa-location-dot font-size-1-2"></i>
+        <address class="font-size-1-2">Hobypark Bohumín</address>
+      </a>
+      <div class="flex gap-2 items-center w-fit">
+        <i class="fa-solid fa-calendar-days font-size-1-2"></i>
+        <time datetime="2024-08-17" class="font-size-1-2">17. Srpna 16:00</time>
+      </div>
+      <a
+        class="flex gap-2 items-center font-size-1-2 w-fit"
+        href="https://www.mesto-bohumin.cz/cz/volny-cas/co-kdy-kde/26457-pivni-slavnosti.html"
+      >
+        <i class="fa-solid fa-globe font-size-1-2"></i>
+        Stránky akce</a
+      >
+    </article>
+  </div>
 </section>
 
-      <gigs_pageeeee />
+      <section id="records">
+  <h2>Nahrávky</h2>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/BpS5IyCyr50?si=rLsqnJ3LXLysYT-q"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+
       <section id="contact">
   <h2>Kontakt</h2>
   <div>
     <div class="flex gap-2 items-center">
+  <a href="https://www.facebook.com/field.band">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="https://www.instagram.com/field._band/">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+    <div class="flex gap-2 items-center">
       <i class="fa-solid fa-envelope"></i>
       <address>kapela.field@gmail.com</address>
-    </div>
-    <div class="flex gap-2 items-center">
-      <a href="https://www.facebook.com/field.band">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a href="https://www.instagram.com/field._band/">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
     </div>
   </div>
 </section>

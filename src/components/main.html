@@ -3,48 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.webp" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/b67a1c33ae.js"
+      crossorigin="anonymous"
+    ></script>
     <title>f i e l d .</title>
   </head>
   <body>
-    <header class="display-none">
-      <div>Stránky jsou ve fázi vývoje...</div>
-      <a href="#" class="no-href-styles">
-        <img src="./favicon.png" alt="logo" />
-      </a>
-      <nav>
-        <ul class="navigation">
-          <li>
-            <a href="#news">{news}</a>
-          </li>
-          <li>
-            <a href="#about">{about}</a>
-          </li>
-          <li>
-            <a href="#records">{records}</a>
-          </li>
-          <li>
-            <a href="#gigs">{gigs}</a>
-          </li>
-          <li>
-            <a href="#contact">{contact}</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+    <the_header />
+    <main class="relative">
+      <floating_logo />
       <img src="./media/home.webp" alt="picture_of_a_band" />
       <!-- <img src="/media/logo.png" alt="logo" /> -->
       <!-- <div class="home_background"></div> -->
-    </main>
-    <footer class="display-none">
-      Copyright 2024
-      <news_page />
-      <about_page />
-      <records_page />
       <gigs_page />
+      <records_page />
       <contact_page />
-    </footer>
+    </main>
+    <footer>Copyright 2024</footer>
   </body>
 </html>
