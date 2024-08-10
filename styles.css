@@ -114,7 +114,7 @@ section h2 {
 }
 
 *:target {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 100px;
 }
 
 .header-logo {
@@ -134,7 +134,7 @@ section h2 {
     top: 1rem;
     gap: 2rem;
     z-index: 2;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .block {
@@ -343,9 +343,6 @@ i.fa-instagram {
         display: none;
     }
 
-    *:target {
-        scroll-margin-top: 100px;
-    }
 
     header>nav {
         display: none;
