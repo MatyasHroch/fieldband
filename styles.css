@@ -177,6 +177,10 @@ header img {
     display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .items-center {
     align-items: center;
 }
@@ -195,6 +199,10 @@ header img {
 
 .mt-4 {
     margin-top: 2rem;
+}
+
+.gap-4 {
+    gap: 2rem;
 }
 
 .gap-2 {
