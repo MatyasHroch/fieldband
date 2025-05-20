@@ -55,6 +55,13 @@ main {
     gap: 2rem;
 }
 
+article {
+    border: #E0E0E0 1px dashed;
+    border-radius: 0.5em;
+    padding: 1em;
+    width: fit-content;
+}
+
 address,
 time {
     font-size: 1.5rem;
@@ -124,6 +131,10 @@ section h2 {
     font-size: 1.2rem;
 }
 
+.link--decorative {
+    text-decoration: underline;
+}
+
 .floating-logo {
     position: absolute;
     margin: auto;
@@ -177,6 +188,10 @@ header img {
     display: flex;
 }
 
+.flex--col {
+    flex-direction: column;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -187,6 +202,10 @@ header img {
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 .mt-1 {
@@ -211,6 +230,10 @@ header img {
 
 .gap-1 {
     gap: 0.5rem;
+}
+
+.h-full {
+    height: 100%;
 }
 
 .w-fit {
